@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vanilla javascript weather app with animations"
+    />
+    <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sunday 10:17</h2>
+
+      <form>
+        <input
+          type="text"
+          placeholder="🔍Search city"
+          autocomplete="off"
+          autofocus="on"
+          id="search-input"
+        />
+      </form>
+      <button>Show my current location</button>
+
+      <h1>Madrid, Spain</h1>
+
+      <h3>Cloudy</h3>
+      <br />
+      <div class="current-temperature">
+        <span class="temperature">23 </span>
+        <span id="celsius">°C</span>
+
+        <span class="animation">
+          <lottie-player
+            src="https://assets5.lottiefiles.com/private_files/lf30_lurfetu4.json"
+            background="transparent"
+            speed="1"
+            style="width: 150px; height: 150px"
+            loop
+            autoplay
+          ></lottie-player
+        ></span>
+      </div>
+      <div id="feelsLike">Feels like: <span id="feels"> 10</span></div>
+
+      <div class="characteristics">
+        <span class="humidity">Humidity: </span>
+        <span class="current-humidity">90</span>
+        <span id="precentage">%</span>
+        <span class="wind">Wind: </span>
+        <span class="current-wind">4</span><span> m/s</span>
+      </div>
+      <br />
+      <div id="forecast">
+        <div>
+          <div>Tuesday</div>
+          <div>🌦️</div>
+          <div>20/25</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a
+        href="https://github.com/AnnikaLaanemets/Vanilla-javascript-weather-app"
+        target="_blank"
+        >https://github.com/AnnikaLaanemets/Vanilla-javascript-weather-app</a
+      >
+    </footer>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
