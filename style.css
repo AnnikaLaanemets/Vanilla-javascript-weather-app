@@ -11,7 +11,7 @@ body {
 .container {
   width: 333px;
   color: #334257;
-  margin: 20px auto;
+  margin: 15px auto;
   opacity: 0.7;
   background: #d8bfcd;
   padding: 10px;
@@ -41,15 +41,15 @@ button:hover {
 }
 
 h1 {
-  margin: 8px;
+  margin: 4px;
   margin-inline-start: 5%;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 h3 {
   color: #548ca8;
-  font-size: 26px;
+  font-size: 24px;
   margin: 5px;
   margin-inline-start: 7%;
   font-weight: bolder;
@@ -59,7 +59,7 @@ h3::first-letter {
 }
 
 .temperature {
-  font-size: 66px;
+  font-size: 72px;
   margin-inline-start: 20px;
   padding: 2px 2px 2px 20px;
 }
@@ -91,7 +91,7 @@ button {
 .animation {
   display: inline-flex;
   position: absolute;
-  margin-block-start: -50px;
+  margin-block-start: -40px;
   margin-left: 60px;
 }
 

@@ -49,7 +49,7 @@ let days = [
 function search(city) {
   showCurrentWeather(city);
 }
-search("Galway");
+search("Leticia");
 
 function formatDate(latitude, longitude) {
   let date = new Date();
@@ -74,6 +74,7 @@ function formatDate(latitude, longitude) {
     let day = days[adjustedTime.getDay()];
     time.innerHTML = `${day} ${hours}:${minutes}`;
   }
+  return adjustedTime;
 }
 function formatDay(time) {
   let date = new Date(time * 1000);
