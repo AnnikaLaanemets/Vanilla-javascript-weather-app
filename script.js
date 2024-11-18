@@ -59,10 +59,16 @@ function formatDate(latitude, longitude) {
   axios.get(url).then(showTime);
 
   function showTime(response) {
-    let local =
-      response.data.results[0].timezone.offset_DST_seconds / 3600 - offsetHours;
+    if (latitude >= 0) {
+      local =
+        response.data.results[0].timezone.offset_STD_seconds / 3600 -
+        offsetHours;
+    } else {
+      local =
+        response.data.results[0].timezone.offset_DST_seconds / 3600 -
+        offsetHours;
+    }
     let adjustedTime = new Date(date.getTime() + local * 3600 * 1000);
-
     let hours = adjustedTime.getHours();
     if (hours < 10) {
       hours = `0${hours}`;
@@ -74,7 +80,6 @@ function formatDate(latitude, longitude) {
     let day = days[adjustedTime.getDay()];
     time.innerHTML = `${day} ${hours}:${minutes}`;
   }
-  return adjustedTime;
 }
 function formatDay(time) {
   let date = new Date(time * 1000);
